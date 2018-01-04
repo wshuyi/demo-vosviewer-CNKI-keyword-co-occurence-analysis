@@ -2,7 +2,7 @@ import re
 import sys
 
 def add_kw_prefix(data):
-    regex = r"^([^-]+?)$"
+    regex = r"^([^\-\s]+?)\s+$"
     subst = "KW  - \\1"
     newdata = re.sub(regex, subst, data, 0, re.MULTILINE)
     return newdata
