@@ -15,10 +15,10 @@ def main(argv):
         with open(argv[1]) as f:
             data = f.read()
 
-        newdata = add_kw_prefix(data)
-        outfile = "output.ris"
-        with open(outfile, 'w') as f:
-            f.write(newdata)
+    data = add_kw_prefix(data)
+    outfile = "output.ris"
+    with open(outfile, 'w', encoding='utf8') as f:
+        f.write(data)
 
 if __name__ == "__main__":
     main(sys.argv)
